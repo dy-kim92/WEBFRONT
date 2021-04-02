@@ -11,22 +11,28 @@
         /*  구조 선택자 : 형제 관계에서의 위치로 요소를 선택 */
         /*  class=menu 인 요소의 자식 li 중 첫번째 형제 */
         .menu > li:first-child{
-          background-color: lightgreen;
+          /* 키워드 이용 색상 선택 */
+          /* background-color: lightgreen; */
+          background-color: rgba(0, 127, 0, 0.1);
         }
 
         /*  class=menu 인 요소의 자식 li 중 두번째 형제 */
         .menu > li:nth-child(2){
-          background-color: lightblue;
+          /* background-color: lightblue; */
+          background-color: #0000FF20;  /* 16진수 방식 */
         }
 
         /*  class=menu 인 요소의 자식 li 중 뒤에서 두번째 형제 */
         .menu > li:nth-last-child(2){
-          background-color: plum;
+          /* background-color: plum; */
+          background-color: rgba(127, 0, 127, 0.1);
         }
 
         /*  class=menu 인 요소의 자식 li 중 마지막 형제 */
         .menu > li:last-child{
-          background-color: pink;
+          /* background-color: pink; */
+          /* background-color: #FF000022; */
+          background-color: #F002;
         }
 
         /*  class=beverage 요소의 자식 h2 */
@@ -38,10 +44,26 @@
           /* font-size: 150%; */
           /*  상대 단위 : em -> 배율 */
           font-size: 1.5em;
+          font-weight: bold;
         }
 
         .beverage > p {
           font-size: 1.2em; /*  16px 의 1.2배 = 120% */
+          font-weight: 400; /* = normal */
+        }
+
+        body{
+          /* 표시할 글꼴의 후보군을 나열
+            앞쪽 폰트부터 적용되고, 없으면 뒤쪽 후보 글꼴이 대체됨
+            최족적으로 일반 글꼴(serif, sans-serif, monospace)을 명시 */
+          font-family: '맑은 고딕', 돋움, sans-serif;
+          font-weight: normal;  /* 400 */
+        }
+
+        .feature {
+          /* text-decoration 속성 : 선으로 요소를 꾸미는 속성 */
+          /* none, line-through, underline, overline 등이 있다 */
+          text-decoration: underline;
         }
 
       </style>
@@ -82,8 +104,10 @@
             . : 현재 위치
             .. : 부모 디렉터리 -->
         <img src="./images/green.jpg" alt="Green Tea Cooler" />
-        <p>
-          Chock full of vitamins and minerals, this elixir combines the healthful benefits of green tea with a twist of chamomile blossoms and ginger root.
+        <p>             <!-- span : 개행이 없는 공간 분할 태그 (반대 : div - 개행 있음)-->
+          Chock full of <span class="feature">vitamins and minerals</span>, 
+          this elixir combines the healthful benefits of green tea with a twist of 
+          chamomile blossoms and ginger root.
         </p>
       </div>
     </section>
@@ -93,7 +117,9 @@
         <h2>Raspberry Ice Concentration</h2>
         <img src="images/lightblue.jpg" alt="Raspberry Ice Concentration" />
         <p>
-          Combining raspberry juice with lemon grass, citrus peel and rosehips, this icy drink will make your mind feel clear and crisp.
+          Combining raspberry juice with lemon grass, 
+          citrus peel and rosehips, 
+          this icy drink will make your mind feel clear and crisp.
         </p>
       </div>
     </section>
@@ -103,7 +129,8 @@
         <h2>Blueberry Bliss Elixir</h2>
         <img src="images/blue.jpg" alt="Blueberry Bliss Elixir" />
         <p>
-          Blueberries and cherry essence mixed into a base of elderflower herb tea will put you in a relaxed state of bliss in no time.
+          Blueberries and cherry essence mixed into a base of elderflower herb tea 
+          will put you in a relaxed state of bliss in no time.
         </p>
       </div>
     </section>
