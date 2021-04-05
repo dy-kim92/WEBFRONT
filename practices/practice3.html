@@ -5,13 +5,14 @@
 <title>리스트를 이용한 메뉴 만들기</title>
 <style type="text/css">
 
+    /* 단계 1 */
     * {
         margin: 0px;
         padding: 0px;
     }
 
     body{
-        font-family: '맑은 고딕', 돋움;
+        font-family: '맑은 고딕', 돋움, sans-serif;
         font-size: 12px;
         color: #333;
     }
@@ -24,12 +25,12 @@
         height: 520px;
     }
 
-    ul {
+    /* 단계 2 */
+    .tab-box ul {
         list-style-type: none;
-        height: 27px;
     }
 
-    li {
+    .tab-box li {
         float: left;
         width: 100px;
         height: 22px;
@@ -42,7 +43,11 @@
         border-top-right-radius: 10px;
     }
 
-    .tab-view {
+    .tab-box > ul {
+        height: 27px;
+    }
+
+    .tab-box > div {
         margin-top: -1px;
         text-align: center;
         line-height: 200px;
@@ -53,7 +58,6 @@
     .selected:hover{
         background-color: orange;
     }
-
 
 </style>
 <script src="" type="text/javascript"></script>
